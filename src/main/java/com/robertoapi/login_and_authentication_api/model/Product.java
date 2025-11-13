@@ -17,9 +17,9 @@ public class Product {
     private Long id;
     private String nameProduct;
 
-    @OneToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+//    @OneToOne
+//    @JoinColumn(name = "category_id")
+//    private Category category;
 
 
 }

@@ -46,12 +46,12 @@ public class UserService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
         }
         else{
-            User userEdit = userDB.get();
+            User editUser = userDB.get();
 
-            userEdit.setUsername(updateUser.getUsername());
-            userEdit.setPassword(updateUser.getPassword());
+            editUser.setUsername(updateUser.getUsername());
+            editUser.setPassword(updateUser.getPassword());
 
-            userRepository.save(userEdit);
+            userRepository.save(editUser);
         }
     }
 

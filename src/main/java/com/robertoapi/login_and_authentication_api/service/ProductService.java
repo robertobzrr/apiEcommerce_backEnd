@@ -25,12 +25,12 @@ public class ProductService {
     }
 
 
-    public List<Product> findAllUsers(){
+    public List<Product> findAllProducts(){
         return productRepository.findAll();
     }
 
 
-    public Optional<Product> findUserById(Long id){
+    public Optional<Product> findProductById(Long id){
         return productRepository.findById(id);
     }
 
@@ -41,7 +41,7 @@ public class ProductService {
 
 
     public void updateProductById(Long id, Product updateProduct){
-        Optional<Product> productDB = findUserById(id);
+        Optional<Product> productDB = findProductById(id);
 
         if(productDB.isEmpty()){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
@@ -49,7 +49,10 @@ public class ProductService {
         else{
             Product editProduct = productDB.get();
 
+            editProduct.setNameProduct(updateProduct.getNameProduct());
+      //      editProduct.setCategory(updateProduct.getCategory());
 
+            productRepository.save(editProduct);
         }
     }
 

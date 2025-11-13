@@ -30,14 +30,28 @@ public class ProductController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAllProducts(){
-        return productService.findAllUsers();
+        return productService.findAllProducts();
     }
 
 
-    @GetMapping
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<Product> findUserById(Long id){
-        return productService.findUserById(id);
+    public Optional<Product> findProductById(@PathVariable Long id){
+        return productService.findProductById(id);
+    }
+
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteProduct(@PathVariable Long id){
+        productService.deleteProduct(id);
+    }
+
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateProductById(@PathVariable Long id, @RequestBody Product updateProduct){
+        productService.updateProductById(id, updateProduct);
     }
 
 
