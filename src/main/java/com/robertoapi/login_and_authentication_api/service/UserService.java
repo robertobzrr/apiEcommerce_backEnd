@@ -1,6 +1,6 @@
 package com.robertoapi.login_and_authentication_api.service;
-import com.robertoapi.login_and_authentication_api.dto.UserRequestDTO;
-import com.robertoapi.login_and_authentication_api.dto.UserResponseDTO;
+import com.robertoapi.login_and_authentication_api.dtos.UserRequestDTO;
+import com.robertoapi.login_and_authentication_api.dtos.UserResponseDTO;
 import com.robertoapi.login_and_authentication_api.model.User;
 import com.robertoapi.login_and_authentication_api.repository.UserRepository;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.robertoapi.login_and_authentication_api.dto;
+package com.robertoapi.login_and_authentication_api.dtos;
 
 import com.robertoapi.login_and_authentication_api.model.Cart;
 import com.robertoapi.login_and_authentication_api.model.Order;

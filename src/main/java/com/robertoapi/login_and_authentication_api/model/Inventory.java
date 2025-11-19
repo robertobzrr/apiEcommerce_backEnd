@@ -20,6 +20,7 @@ public class Inventory {
 
     @OneToOne
     @JoinColumn(name = "id_product", nullable = false)
+    @JsonIgnore
     private Product product;
 
 
