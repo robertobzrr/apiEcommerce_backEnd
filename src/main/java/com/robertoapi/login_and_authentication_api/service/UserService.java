@@ -83,6 +83,7 @@ public class UserService {
 
     private UserResponseDTO toResponseDTO(User user){
         UserResponseDTO respDTO = new UserResponseDTO();
+
         respDTO.setName(user.getName());
         respDTO.setEmail(user.getEmail());
 
