@@ -39,7 +39,8 @@ TB_USER
 INSOMNIA_TEST
 
 BEFORE_MAPPER
-<img width="819" height="797" alt="Captura de tela 2025-11-21 101422" src="https://github.com/user-attachments/assets/15dc081e-11b5-4aae-a8df-54cff3814dfd" />
+<img width="1725" height="870" alt="image" src="https://github.com/user-attachments/assets/f6208b23-1836-4585-b51e-08d5f5c19e6b" />
+
 
 AFTER_MAP
 <img width="1795" height="942" alt="Captura de tela 2025-11-21 101531" src="https://github.com/user-attachments/assets/f17d7123-f79d-4c81-834e-1e8554875c74" />
