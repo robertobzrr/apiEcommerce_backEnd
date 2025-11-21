@@ -11,6 +11,6 @@ import java.util.List;
 public class OrderResponseDTO {
     private String name;
     private OrderStatusEnum status;
-    private User user;
+    //private User user;
     private List<OrderItem> itens;
 }

@@ -55,7 +55,7 @@ public class OrderService {
 
         respDTO.setName(order.getName());
         respDTO.setStatus(order.getStatus());
-        respDTO.setUser(order.getUser());
+       // respDTO.setUser(order.getUser());
         respDTO.setItens(order.getItems());
 
 
