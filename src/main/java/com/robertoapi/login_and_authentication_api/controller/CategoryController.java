@@ -1,5 +1,7 @@
 package com.robertoapi.login_and_authentication_api.controller;
 
+import com.robertoapi.login_and_authentication_api.dtos.CategoryRequestDTO;
+import com.robertoapi.login_and_authentication_api.dtos.CategoryResponseDTO;
 import com.robertoapi.login_and_authentication_api.model.Category;
 import com.robertoapi.login_and_authentication_api.repository.CategoryRepository;
 import com.robertoapi.login_and_authentication_api.service.CategoryService;
@@ -24,21 +26,21 @@ public class CategoryController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createCategory(@RequestBody Category category){
-        categoryService.createCategory(category);
+    public void createCategory(@RequestBody CategoryRequestDTO categoryDTO){
+        categoryService.createCategory(categoryDTO);
     }
 
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Category> findAllCategorys(){
+    public List<CategoryResponseDTO> findAllCategorys(){
         return categoryService.findAllCategorys();
     }
 
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<Category> findCategoryById(@PathVariable Long id){
+    public Optional<CategoryResponseDTO> findCategoryById(@PathVariable Long id){
         return categoryService.findCategoryById(id);
     }
 
@@ -52,8 +54,8 @@ public class CategoryController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateCategoryById(@PathVariable Long id, @RequestBody Category updateCategory){
-        categoryService.updateCategoryById(id, updateCategory);
+    public void updateCategoryById(@PathVariable Long id, @RequestBody CategoryRequestDTO updateCategoryDTO){
+        categoryService.updateCategoryById(id, updateCategoryDTO);
     }
 
 
