@@ -83,6 +83,7 @@ public class ProductService {
 
         private ProductResponseDTO toResponseDTO(Product product){
             ProductResponseDTO respDTO = new ProductResponseDTO();
+            respDTO.setId(product.getId());
             respDTO.setName(product.getName());
             respDTO.setDescription(product.getDescription());
             respDTO.setPrice(product.getPrice());
